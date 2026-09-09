@@ -1,11 +1,11 @@
-timescale 1ns/ps
+`timescale 1ns/ps
 module full_adder(
     input a,
     input b,
-    input cin,
+    input c,
     output s,
     output cout;
 )
-    s=a^b^cin;
-    cout=a&b|b&c|c&a;
+    assign s=a^b^cin;
+    assign cout=a&b|b&c|c&a;
 endmodule
